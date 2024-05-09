@@ -1026,7 +1026,8 @@ Route104_Text_ImNotATrainer:
 	.string "But that's right, if TRAINERS lock eyes,\n"
 	.string "it's a challenge to battle.\p"
 	.string "If you don't want to battle, stay out\n"
-	.string "of their sight.$"
+	.string "of their sight.\p"
+	.string "I mean, Pika Pika$"
 
 Route104_Text_LikeFillingMouthWithSeedsTakeThis:
 	.string "I like filling my mouth with seeds,\n"

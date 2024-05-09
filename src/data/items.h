@@ -114,6 +114,10 @@ static const u8 sLuckIncenseDesc[]    = _("Doubles money in\n"
                                           "battle if the\n"
                                           "holder takes part.");
 
+static const u8 sInfiniteRepelDesc[] = _("Repels all wild\n"
+                                          "Pokemon for any\n"
+                                          "number of steps");
+                                          
 static const u8 sPureIncenseDesc[]    = _("A hold item that\n"
                                           "helps repel wild\n"
                                           "Pokémon.");
@@ -12623,5 +12627,15 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+   [ITEM_INFINITE_REPEL] =
+   {
+       .name = _("InfiniteRepel"),
+       .price = 0,
+       .description = sInfiniteRepelDesc,
+       .importance = 1,
+       .pocket = POCKET_KEY_ITEMS,
+       .type = ITEM_USE_BAG_MENU,
+       .fieldUseFunc = ItemUseOutOfBattle_InfiniteRepel,
     },
 };
