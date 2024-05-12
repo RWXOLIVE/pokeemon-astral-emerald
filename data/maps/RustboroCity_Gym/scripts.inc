@@ -166,26 +166,26 @@ RustboroCity_Gym_Text_JoshIntro:
 RustboroCity_Gym_Text_Leader_BrockIntro:	
 	.string "Come right ahead, challenger!\n"
     .string "My name is Brock\p"
-	.string "I'm a gym leader from the Kanto region\p"
+	.string "I'm a gym leader from the Kanto region\n"
 	.string "I came out to Hoenn\p" 
 	.string "In order to train their very own rock gym leader!\n"
 	.string "But if You're over here...\p"
-	.string "I guess that means you want to try\p"
+	.string "I guess that means you want to try\n"
 	.string "And break Kanto's sturdiest rock!\p"
 	.string "Go on and try then!$"
 
 RustboroCity_Gym_Text_Leader_BrockDefeat:
-	.string "Well, I Guess My Strategy\n"
-	.string "Just Hit Rock Bottom This Time\n"
-	.string "Please Accept Your Rewards!$"
+	.string "Well, I guess my strategy\n"
+	.string "Just hit rock bottom this time\n"
+	.string "Please accept your rewards!$"
 
 RustboroCity_Gym_Text_Leader_BrockPostBattle:
-	.string "Since You Are So Strong, You Should\n"
-	.string "Challenge Other GYM LEADERS.\p"
-	.string "By battling Many TRAINERS, You Should\n"
-	.string "Learn Many Things.\n"
-	.string "And Please A Little Gift.\p"
-	.string "If You See An Old Friend Of Mine.\n"
+	.string "Since you are so strong, you should\n"
+	.string "Challenge other GYM LEADERS.\p"
+	.string "By battling many TRAINERS, you should\n"
+	.string "Learn many things.\n"
+	.string "And please a little gift.\p"
+	.string "If you see an old friend of mine.\n"
 	.string "Tell Him Hi, Though He Doesnt Talk Much.$"
 
 RustboroCity_Gym_Text_JoshDefeat:

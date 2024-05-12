@@ -391,7 +391,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpeed     = 40,
         .baseSpAttack  = 66,
         .baseSpDefense = 56,
-        .types = { TYPE_WATER, TYPE_FAIRY },
+        .types = MON_TYPES(TYPE_WATER),
         .catchRate = 45,
         .expYield = 64,
         .evYield_SpAttack = 1,
@@ -433,7 +433,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         FOOTPRINT(Popplio)
         .levelUpLearnset = sPopplioLevelUpLearnset,
         .teachableLearnset = sPopplioTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_BRIONNE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_BRIONNE}),
     },
 
     [SPECIES_BRIONNE] =

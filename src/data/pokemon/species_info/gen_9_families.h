@@ -1410,7 +1410,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS),
-        .abilities = { ABILITY_SEED_SOWER, ABILITY_NONE, ABILITY_HARVEST },
+        .abilities = { ABILITY_GRASS_PELT, ABILITY_NONE, ABILITY_HARVEST },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Arboliva"),
         .cryId = CRY_ARBOLIVA,
@@ -2729,7 +2729,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         //FOOTPRINT(Capsakid)
         .levelUpLearnset = sCapsakidLevelUpLearnset,
         .teachableLearnset = sCapsakidTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_MOVE, MOVE_SUNNY_DAY, SPECIES_SCOVILLAIN}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_FIRE_STONE, SPECIES_SCOVILLAIN}),
     },
 
     [SPECIES_SCOVILLAIN] =

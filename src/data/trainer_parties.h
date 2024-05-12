@@ -8990,15 +8990,6 @@ static const struct TrainerMon sParty_Aidan[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 17,
-    .species = SPECIES_SABLEYE,
-    .heldItem = ITEM_SAFETY_GOGGLES,
-    .nature = NATURE_ADAMANT,
-    .moves = {MOVE_WILL_O_WISP, MOVE_SHADOW_CLAW, MOVE_POISON_JAB, MOVE_KNOCK_OFF},
-    .ability = ABILITY_PRANKSTER,
-    },
-    {
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 17,
     .species = SPECIES_LUNATONE,
     .heldItem = ITEM_NONE,
     .nature = NATURE_NAUGHTY,

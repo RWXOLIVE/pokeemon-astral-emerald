@@ -64,10 +64,13 @@ Route102_EventScript_Rick::
 	end
 
 Route102_EventScript_Tiana::
-	trainerbattle_single TRAINER_TIANA, Route102_Text_TianaIntro, Route102_Text_TianaDefeated,
-	setflag FLAG_LVL14CAP
+	trainerbattle_single TRAINER_TIANA, Route102_Text_TianaIntro, Route102_Text_TianaDefeated, Route102_EventScript_TianaDefeated
 	msgbox Route102_Text_TianaPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route102_EventScript_TianaDefeated::
+setflag FLAG_LVL14CAP
+end
 
 Route102_EventScript_Allen::
 	trainerbattle_single TRAINER_ALLEN, Route102_Text_AllenIntro, Route102_Text_AllenDefeated
