@@ -49,7 +49,6 @@ RustboroCity_Gym_EventScript_ReceiveGeodudeAlolanParty::
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	release
 	end
 
 RustboroCity_Gym_EventScript_ReceiveGeodudeAlolanToPC::

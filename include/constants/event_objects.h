@@ -77,7 +77,7 @@
 #define OBJ_EVENT_GFX_SPENSER                     73
 #define OBJ_EVENT_GFX_NOLAND                      74
 #define OBJ_EVENT_GFX_LUCY                        75
-#define OBJ_EVENT_GFX_UNUSED_MAGNEMITE_DOLL       76
+#define OBJ_EVENT_GFX_GOLD_ITEM_BALL              76
 #define OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL        77
 #define OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL          78
 #define OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL         79
@@ -240,7 +240,6 @@
 #define OBJ_EVENT_GFX_LUGIA                      236
 #define OBJ_EVENT_GFX_HOOH                       237
 #define OBJ_EVENT_GFX_BROCK                      238
-#define OBJ_EVENT_GFX_BRUNO                      239
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //
 // Object event graphics ids are 1 byte in size (max value of 255), and the dynamic

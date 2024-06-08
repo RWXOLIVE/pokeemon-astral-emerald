@@ -2156,7 +2156,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("TAKAO"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_SMART_MON_CHOICES | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_STATUS_MOVES | AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_OMNISCIENT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_DOUBLE_BATTLE | AI_FLAG_HELP_PARTNER,
         .party = TRAINER_PARTY(sParty_Takao),
     },
 
@@ -3210,9 +3210,9 @@ const struct Trainer gTrainers[] = {
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_LEADER_BRAWLY,
         .trainerName = _("BRAWLY"),
-        .items = {ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
+        .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_SMART_MON_CHOICES | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_STATUS_MOVES | AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_OMNISCIENT | AI_FLAG_HP_AWARE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_SMART_SWITCHING,
         .party = TRAINER_PARTY(sParty_Brawly1),
     },
 
@@ -5120,7 +5120,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("JOCELYN"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_SMART_MON_CHOICES | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_STATUS_MOVES | AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_OMNISCIENT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_DOUBLE_BATTLE,
         .party = TRAINER_PARTY(sParty_Jocelyn),
     },
 
@@ -5132,7 +5132,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("LAURA"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_SMART_MON_CHOICES | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_STATUS_MOVES | AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_OMNISCIENT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_Laura),
     },
 
@@ -6884,7 +6884,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("BRENDEN"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_SMART_MON_CHOICES | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_STATUS_MOVES | AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_OMNISCIENT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_DOUBLE_BATTLE,
         .party = TRAINER_PARTY(sParty_Brenden),
     },
 
@@ -6896,7 +6896,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("LILITH"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_SMART_MON_CHOICES | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_STATUS_MOVES | AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_OMNISCIENT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_Lilith),
     },
 
@@ -6908,7 +6908,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("CRISTIAN"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_SMART_MON_CHOICES | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_STATUS_MOVES | AI_FLAG_PREFER_STRONGEST_MOVE | AI_FLAG_OMNISCIENT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_DOUBLE_BATTLE | AI_FLAG_HELP_PARTNER,
         .party = TRAINER_PARTY(sParty_Cristian),
     },
 
