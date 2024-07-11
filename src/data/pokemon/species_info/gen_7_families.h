@@ -422,6 +422,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .shinyPalette = gMonShinyPalette_Popplio,
         .iconSprite = gMonIcon_Popplio,
         .iconPalIndex = 0,
+        .isLegendary = TRUE,
         FOOTPRINT(Popplio)
         .levelUpLearnset = sPopplioLevelUpLearnset,
         .teachableLearnset = sPopplioTeachableLearnset,
@@ -474,6 +475,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .shinyPalette = gMonShinyPalette_Brionne,
         .iconSprite = gMonIcon_Brionne,
         .iconPalIndex = 0,
+        .isLegendary = TRUE,
         FOOTPRINT(Brionne)
         .levelUpLearnset = sBrionneLevelUpLearnset,
         .teachableLearnset = sBrionneTeachableLearnset,
@@ -526,6 +528,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .shinyPalette = gMonShinyPalette_Primarina,
         .iconSprite = gMonIcon_Primarina,
         .iconPalIndex = 0,
+        .isLegendary = TRUE,
         FOOTPRINT(Primarina)
         .levelUpLearnset = sPrimarinaLevelUpLearnset,
         .teachableLearnset = sPrimarinaTeachableLearnset,
@@ -949,9 +952,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         FOOTPRINT(Charjabug)
         .levelUpLearnset = sCharjabugLevelUpLearnset,
         .teachableLearnset = sCharjabugTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_MAPSEC, MAPSEC_NEW_MAUVILLE, SPECIES_VIKAVOLT},
-                                {EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_VIKAVOLT},
-                                {EVO_NONE, 0, SPECIES_VIKAVOLT_TOTEM}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_VIKAVOLT}),
     },
 
     [SPECIES_VIKAVOLT] =
@@ -970,7 +971,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-        .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_SPEED_BOOST },
+        .abilities = { ABILITY_LEVITATE, ABILITY_BATTERY, ABILITY_SPEED_BOOST },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Vikavolt"),
         .cryId = CRY_VIKAVOLT,
@@ -3435,7 +3436,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .isLegendary = TRUE,
         .levelUpLearnset = sTypeNullLevelUpLearnset,
         .teachableLearnset = sTypeNullTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_SILVALLY_NORMAL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 45, SPECIES_SILVALLY_NORMAL}),
     },
 
 #define SILVALLY_SPECIES_INFO(type, _palette)                               \
@@ -4721,8 +4722,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .tmIlliterate = TRUE,
         .levelUpLearnset = sCosmoemLevelUpLearnset,
         .teachableLearnset = sCosmoemTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL_DAY, 53, SPECIES_SOLGALEO},
-                                {EVO_LEVEL_NIGHT, 53, SPECIES_LUNALA}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SUN_STONE, SPECIES_SOLGALEO},
+                                {EVO_ITEM, ITEM_MOON_STONE, SPECIES_LUNALA}),
     },
 
     [SPECIES_SOLGALEO] =

@@ -651,7 +651,7 @@
     },
     {
       "map_section": "MAPSEC_ISLAND_CAVE",
-      "name": "ISLAND CAVE",
+      "name": "ICEDRIFT CAVE",
       "x": 0,
       "y": 10,
       "width": 1,
@@ -1689,7 +1689,7 @@
     },
     {
       "map_section": "MAPSEC_ALTERING_CAVE",
-      "name": "ALTERING CAVE",
+      "name": "STARFALL CAVE",
       "x": 6,
       "y": 8,
       "width": 1,

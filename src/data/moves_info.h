@@ -40,8 +40,8 @@ static const u8 sMegaDrainDescription[] = _(
     "half the damage inflicted.");
 
 static const u8 sHyperBeamDescription[] = _(
-    "Powerful, but leaves the\n"
-    "user immobile the next turn.");
+    "A powerful attack, but can't\n"
+    "be used twice in a row.");
 
 static const u8 sRevengeDescription[] = _(
     "An attack that gains power\n"
@@ -1630,10 +1630,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .ignoresKingsRock = B_UPDATED_MOVE_FLAGS < GEN_3,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_RECHARGE,
-            .self = TRUE,
-        }),
+        .cantUseTwice = TRUE,
         .contestEffect = CONTEST_EFFECT_JAMS_OTHERS_BUT_MISS_ONE_TURN,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -3650,7 +3647,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "light that cuts accuracy."),
         .effect = EFFECT_ACCURACY_DOWN,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_ELECTRIC,
         .accuracy = B_UPDATED_MOVE_DATA >= GEN_4 ? 100 : 70,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
@@ -7711,7 +7708,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 60 : 50,
         .type = TYPE_ROCK,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_6 ? 95 : 80,
+        .accuracy = 100,
         .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 15 : 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -10015,10 +10012,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_RECHARGE,
-            .self = TRUE,
-        }),
+        .cantUseTwice = TRUE,
         .contestEffect = CONTEST_EFFECT_JAMS_OTHERS_BUT_MISS_ONE_TURN,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
@@ -12048,7 +12042,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "Shoots boiling water at the\n"
             "foe. May inflict a burn."),
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_HYDRO_STEAM,
         .power = 80,
         .type = TYPE_WATER,
         .accuracy = 100,
@@ -14137,7 +14131,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "Immerses the foe in heated\n"
             "steam. May inflict a burn."),
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_HYDRO_STEAM,
         .power = 110,
         .type = TYPE_WATER,
         .accuracy = 95,

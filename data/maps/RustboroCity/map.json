@@ -110,8 +110,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
-      "x": 16,
-      "y": 44,
+      "x": 14,
+      "y": 45,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -123,8 +123,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 17,
-      "y": 44,
+      "x": 15,
+      "y": 45,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,

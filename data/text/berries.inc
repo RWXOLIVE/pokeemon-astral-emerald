@@ -11,12 +11,13 @@ Route104_Text_PlantBerriesInSoilTakeThis:
 	.string "Here, I'll share this with you.$"
 
 Route104_Text_TrainersOftenMakeMonHoldBerries:
-	.string "The way you look, you must be a\n"
-	.string "TRAINER, no?\p"
-	.string "TRAINERS often make POKéMON hold\n"
-	.string "BERRIES.\p"
-	.string "It's up to you whether to grow BERRIES\n"
-	.string "or use them.$"
+	.string "I'm the {COLOR BLUE}BERRY{COLOR DARK_GRAY} expert, due to the weather\n"
+	.string "being bad.\l"
+	.string "Planting berries is very {COLOR RED}difficult{COLOR DARK_GRAY}.\p"
+	.string "You can only get certain berries\n"
+	.string "from buying off some marts.\p"
+	.string "I gathered as much berries\n"
+	.string "in this area, please take these.$"
 
 Route111_Text_WateredPlantsEveryDayTakeBerry:
 	.string "I watered the plants every day.\n"

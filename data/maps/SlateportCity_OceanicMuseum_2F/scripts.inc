@@ -291,7 +291,9 @@ SlateportCity_OceanicMuseum_2F_Text_SternWhoAreYou:
 SlateportCity_OceanicMuseum_2F_Text_WereTeamAqua:
 	.string "We're TEAM AQUA!\p"
 	.string "Our BOSS wants those parts!\n"
-	.string "Shut your yap and fork them over!$"
+	.string "Shut your yap and fork them over.\l"
+	.string "Wait there's that kid from before grunt one\n"
+	.string "{COLOR RED}LETS GET THIS LITTLE TWERP{COLOR DARK_GRAY}$"
 
 SlateportCity_OceanicMuseum_2F_Text_Grunt1Defeat:
 	.string "Awaaaah!\n"

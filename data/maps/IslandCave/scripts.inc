@@ -15,7 +15,7 @@ IslandCave_EventScript_TryRemoveRegice::
 	return
 
 IslandCave_OnLoad:
-	call_if_unset FLAG_SYS_BRAILLE_REGICE_COMPLETED, IslandCave_EventScript_HideRegiEntrance
+	call_if_set FLAG_SYS_BRAILLE_REGICE_COMPLETED, IslandCave_EventScript_HideRegiEntrance
 	end
 
 IslandCave_EventScript_HideRegiEntrance::
@@ -51,8 +51,8 @@ IslandCave_EventScript_OpenRegiEntrance::
 
 IslandCave_EventScript_CaveEntranceMiddle::
 	lockall
-	call_if_set FLAG_TEMP_REGICE_PUZZLE_FAILED, IslandCave_EventScript_ClearSteps
-	goto_if_set FLAG_SYS_BRAILLE_REGICE_COMPLETED, IslandCave_EventScript_BigHoleInWall
+	call_if_unset FLAG_TEMP_REGICE_PUZZLE_FAILED, IslandCave_EventScript_ClearSteps
+	goto_if_unset FLAG_SYS_BRAILLE_REGICE_COMPLETED, IslandCave_EventScript_BigHoleInWall
 	braillemessage IslandCave_Braille_RunLapAroundWall
 	setflag FLAG_TEMP_REGICE_PUZZLE_STARTED
 	special ShouldDoBrailleRegicePuzzle

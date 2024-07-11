@@ -2,13 +2,28 @@ RustboroCity_Gym_MapScripts::
 	.byte 0
 
 RustboroCity_Gym_EventScript_Roxanne::
+    goto_if_set FLAG_DEFEATED_RUSTBORO_GYM, RoxanneBeat
 	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_RoxanneRematch
 	goto_if_unset FLAG_RECEIVED_TM_ROCK_TOMB, RustboroCity_Gym_EventScript_GiveRockTomb
+	release
+	end
+
+RoxanneBeat::
+    lock
+	faceplayer
 	msgbox RustboroCity_Gym_Text_RoxannePostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+BrockBeat::
+    lock
+	faceplayer
+	msgbox RustboroCity_Gym_Text_Leader_BrockPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
 
 RustboroCity_Gym_EventScript_RoxanneDefeated::
 	message RustboroCity_Gym_Text_ReceivedStoneBadge
@@ -19,6 +34,7 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 	setflag FLAG_BADGE01_GET
 	setvar VAR_RUSTBORO_CITY_STATE, 1
 	addvar VAR_PETALBURG_GYM_STATE, 1
+	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 1
 	call Common_EventScript_SetGymTrainers
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
@@ -36,7 +52,7 @@ RustboroCity_Gym_EventScript_GiftItems::
 RustboroCity_Gym_EventScript_ReceiveGeodudeAlolan::
 	msgbox RustboroCity_Gym_Text_GiftGeodude, MSGBOX_DEFAULT
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_GEODUDE_ALOLAN
-	givemon SPECIES_GEODUDE_ALOLAN, 5, ITEM_HARD_STONE
+	givemon SPECIES_GEODUDE_ALOLAN, 5, ITEM_HARD_STONE, 
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, RustboroCity_Gym_EventScript_ReceiveGeodudeAlolanParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, RustboroCity_Gym_EventScript_ReceiveGeodudeAlolanPC
 	goto Common_EventScript_NoMoreRoomForPokemon
@@ -87,11 +103,9 @@ RustboroCity_Gym_EventScript_GiveRockTomb::
 	end
 
 RustboroCity_Gym_EventScript_Leader_Brock::
+    goto_if_set FLAG_DEFEATED_RUSTBORO_GYM, BrockBeat
 	trainerbattle_single TRAINER_LEADER_BROCK, RustboroCity_Gym_Text_Leader_BrockIntro, RustboroCity_Gym_Text_Leader_BrockDefeat, RustboroCity_Gym_EventScript_Leader_BrockDefeated NO_MUSIC
 	goto_if_unset FLAG_RECEIVED_TM_ROCK_TOMB, RustboroCity_Gym_EventScript_GiveRockTomb, 
-	goto_if_unset FLAG_RECEIVED_ABILITY_CAPSULE, RustboroCity_Gym_EventScript_GiftItems
-	goto_if_unset FLAG_RECEIVED_GEODUDE_ALOLAN, RustboroCity_Gym_EventScript_ReceiveGeodudeAlolan
-	msgbox RustboroCity_Gym_Text_Leader_BrockPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
@@ -104,6 +118,7 @@ RustboroCity_Gym_EventScript_Leader_BrockDefeated::
 	setflag FLAG_BADGE01_GET
 	setvar VAR_RUSTBORO_CITY_STATE, 1
 	addvar VAR_PETALBURG_GYM_STATE, 1
+	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 1
 	call Common_EventScript_SetGymTrainers
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
@@ -140,6 +155,8 @@ RustboroCity_Gym_EventScript_GymGuide::
 
 RustboroCity_Gym_EventScript_GymGuidePostVictory::
 	msgbox RustboroCity_Gym_Text_GymGuidePostVictory, MSGBOX_DEFAULT
+	goto_if_unset FLAG_RECEIVED_ABILITY_CAPSULE, RustboroCity_Gym_EventScript_GiftItems
+	goto_if_unset FLAG_RECEIVED_GEODUDE_ALOLAN, RustboroCity_Gym_EventScript_ReceiveGeodudeAlolan
 	release
 	end
 
@@ -220,44 +237,31 @@ RustboroCity_Gym_Text_JoshIntro:
 
 RustboroCity_Gym_Text_GiftItems:
     .string "Since you won, here are some rewards!\n"
-	.string "An ability capsule changes\n"
+	.string "An {COLOR GREEN}ability {COLOR GREEN}capsule{COLOR DARK_GRAY} changes\p"
 	.string "the ability of the POKéMON$"
 
 RustboroCity_Gym_Text_GiftGeodude:
-	.string "Here is my Geodude, take care of him!\n"
-	.string "{PLAYER} received Geodude Alolan!$"
+	.string "Here is my {COLOR GREEN}Geodude{COLOR DARK_GRAY}, take care of him!$"
 
 RustboroCity_Gym_Text_GeodudeInfo:
     .string "Do you know why alolan Geodude\n"
-	.string "part electric type?\p"
+	.string "part electric type?\n"
 	.string "It's because its body is a\n"
 	.string "magnetic stone!$"
 
 RustboroCity_Gym_Text_Leader_BrockIntro:	
 	.string "Come right ahead, challenger!\n"
-    .string "My name is Brock.\p"
-	.string "I'm a gym leader from the Kanto region!\n"
-	.string "I came out to Hoenn\p" 
-	.string "In order to train their very own rock\n"
-	.string "gym leader, but if you're over here...\p"
-	.string "I guess that means you want to try\n"
-	.string "and break Kanto's sturdiest rock!\p"
-	.string "Go on and try then!$"
+    .string "My name is {COLOR GREEN}Brock{COLOR DARK_GRAY}.\l"
+	.string "I came out to Hoenn in order to train\n" 
+	.string "their gym leader.\p"
+	.string "Come try break Kanto's sturdiest rock!$"
 
 RustboroCity_Gym_Text_Leader_BrockDefeat:
-	.string "Well, I guess my strategy\n"
-	.string "Just hit rock bottom this time\n"
-	.string "Please accept your rewards!\n"
-	.string "Your level cap has raised to level 25.$"
+	.string "Well, I didnt rock...$"
 
 RustboroCity_Gym_Text_Leader_BrockPostBattle:
 	.string "Since you are so strong, you should\n"
-	.string "Challenge other GYM LEADERS.\p"
-	.string "By battling many TRAINERS, you should\n"
-	.string "learn many things.\n"
-	.string "And please a little gift.\p"
-	.string "If you see an old friend of mine.\n"
-	.string "Tell him hi, he doesnt talk much.$"
+	.string "Challenge other GYM LEADERS.$"
 
 RustboroCity_Gym_Text_JoshDefeat:
 	.string "You were too good for me…$"
@@ -294,7 +298,7 @@ RustboroCity_Gym_Text_MarcPostBattle:
 	.string "pick the ROCK type at her young age.$"
 
 RustboroCity_Gym_Text_RoxanneIntro:
-	.string "Hello, I am ROXANNE, the RUSTBORO\n"
+	.string "Hello, I am {COLOR GREEN}ROXANNE{COLOR DARK_GRAY}, the RUSTBORO\n"
 	.string "POKéMON GYM LEADER.\p"
 	.string "I became a GYM LEADER so that I might\n"
 	.string "apply what I learned at the POKéMON\l"
@@ -328,9 +332,9 @@ RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
 
 RustboroCity_Gym_Text_ExplainRockTomb:
 	.string "That TECHNICAL MACHINE, TM39,\n"
-	.string "contains ROCK TOMB.\p"
+	.string "contains {COLOR GREEN}ROCK TOMB{COLOR DARK_GRAY}.\p"
 	.string "It not only inflicts damage by dropping\n"
-	.string "rocks, it also lowers SPEED.\p"
+	.string "rocks, it also {COLOR GREEN}lowers {COLOR GREEN}SPEED{COLOR DARK_GRAY}.\p"
 	.string "If you use a TM, it instantly teaches\n"
 	.string "the move to a POKéMON.\p"
 	.string "Remember, a TM can be used only once,\n"

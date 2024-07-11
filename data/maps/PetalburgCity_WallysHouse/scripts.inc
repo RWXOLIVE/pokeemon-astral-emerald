@@ -21,8 +21,8 @@ PetalburgCity_WallysHouse_OnFrame:
 PetalburgCity_WallysHouse_EventScript_GiveHMSurf::
 	lockall
 	msgbox PetalburgCity_WallysHouse_Text_PleaseExcuseUs, MSGBOX_DEFAULT
-	giveitem ITEM_HM_SURF
-	setflag FLAG_RECEIVED_HM_SURF
+	giveitem ITEM_HM_ROCK_SMASH
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	msgbox PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces, MSGBOX_DEFAULT
 	setvar VAR_PETALBURG_CITY_STATE, 5
 	releaseall
@@ -32,7 +32,7 @@ PetalburgCity_WallysHouse_EventScript_WallysDad::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_WALLY_VICTORY_ROAD, PetalburgCity_WallysHouse_EventScript_DefeatedWallyInVictoryRoad
-	goto_if_set FLAG_RECEIVED_HM_SURF, PetalburgCity_WallysHouse_EventScript_ReceievedHMSurf
+	goto_if_set FLAG_RECEIVED_HM_ROCK_SMASH, PetalburgCity_WallysHouse_EventScript_ReceievedHMSurf
 	goto_if_set FLAG_THANKED_FOR_PLAYING_WITH_WALLY, PetalburgCity_WallysHouse_EventScript_PlayedWithWally
 	msgbox PetalburgCity_WallysHouse_Text_ThanksForPlayingWithWally, MSGBOX_DEFAULT
 	setflag FLAG_THANKED_FOR_PLAYING_WITH_WALLY
@@ -57,7 +57,7 @@ PetalburgCity_WallysHouse_EventScript_PlayedWithWally::
 PetalburgCity_WallysHouse_EventScript_WallysMom::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_HM_SURF, PetalburgCity_WallysHouse_EventScript_ReceivedHMSurf
+	goto_if_set FLAG_RECEIVED_HM_ROCK_SMASH, PetalburgCity_WallysHouse_EventScript_ReceivedHMSurf
 	msgbox PetalburgCity_WallysHouse_Text_WallyWasReallyHappy, MSGBOX_DEFAULT
 	release
 	end
@@ -104,8 +104,9 @@ PetalburgCity_WallysHouse_Text_PleaseExcuseUs:
 	.string "I'd really like you to have this.$"
 
 PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces:
-	.string "If your POKéMON can SURF, you'll be\n"
-	.string "able to go to all sorts of places.$"
+	.string "If your POKéMON can use ROCK SMASH,\n"
+	.string "you'll be able to break the rock\n"
+    .string "on the bridge on ROUTE 103.$"
 
 PetalburgCity_WallysHouse_Text_WallyIsComingHomeSoon:
 	.string "WALLY's coming home soon.\n"

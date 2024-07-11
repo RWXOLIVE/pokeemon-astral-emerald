@@ -261,11 +261,12 @@ Route104_EventScript_ExpertF::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_CHESTO_BERRY_ROUTE_104, Route104_EventScript_ReceivedBerry
-	msgbox Route104_Text_PlantBerriesInSoilTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_CHESTO_BERRY, 50
+	msgbox Route104_Text_TrainersOftenMakeMonHoldBerries, MSGBOX_DEFAULT
+	giveitem ITEM_CHESTO_BERRY, 15
+	giveitem ITEM_CHERI_BERRY, 15
+	giveitem ITEM_PECHA_BERRY, 15
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_CHESTO_BERRY_ROUTE_104
-	msgbox Route104_Text_TrainersOftenMakeMonHoldBerries, MSGBOX_DEFAULT
 	release
 	end
 

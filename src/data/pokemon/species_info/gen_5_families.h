@@ -261,6 +261,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .shinyPalette = gMonShinyPalette_Tepig,
         .iconSprite = gMonIcon_Tepig,
         .iconPalIndex = 0,
+        .isLegendary = TRUE,
         FOOTPRINT(Tepig)
         .levelUpLearnset = sTepigLevelUpLearnset,
         .teachableLearnset = sTepigTeachableLearnset,
@@ -313,6 +314,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .shinyPalette = gMonShinyPalette_Pignite,
         .iconSprite = gMonIcon_Pignite,
         .iconPalIndex = 0,
+        .isLegendary = TRUE,
         FOOTPRINT(Pignite)
         .levelUpLearnset = sPigniteLevelUpLearnset,
         .teachableLearnset = sPigniteTeachableLearnset,
@@ -366,6 +368,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .shinyPalette = gMonShinyPalette_Emboar,
         .iconSprite = gMonIcon_Emboar,
         .iconPalIndex = 0,
+        .isLegendary = TRUE,
         FOOTPRINT(Emboar)
         .levelUpLearnset = sEmboarLevelUpLearnset,
         .teachableLearnset = sEmboarTeachableLearnset,
@@ -486,7 +489,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpeed     = 75,
         .baseSpAttack  = 85,
         .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_WATER, TYPE_STEEL),
+        .types = MON_TYPES(TYPE_WATER, TYPE_ROCK),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 264 : 238,
         .genderRatio = PERCENT_FEMALE(12.5),
@@ -4630,7 +4633,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING, EGG_GROUP_WATER_3),
-        .abilities = { ABILITY_DRY_SKIN, ABILITY_NONE, ABILITY_NONE },
+        .abilities = { ABILITY_DEFEATIST, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Archen"),
         .cryId = CRY_ARCHEN,
@@ -7377,7 +7380,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
     #if P_UPDATED_ABILITIES >= GEN_6
-        .abilities = { ABILITY_FLASH_FIRE, ABILITY_FLAME_BODY, ABILITY_INFILTRATOR },
+        .abilities = { ABILITY_FLASH_FIRE, ABILITY_FLAME_BODY, ABILITY_SHADOW_TAG },
     #else
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_FLAME_BODY, ABILITY_SHADOW_TAG },
     #endif
@@ -7434,7 +7437,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
     #if P_UPDATED_ABILITIES >= GEN_6
-        .abilities = { ABILITY_FLASH_FIRE, ABILITY_FLAME_BODY, ABILITY_INFILTRATOR },
+        .abilities = { ABILITY_FLASH_FIRE, ABILITY_FLAME_BODY, ABILITY_SHADOW_TAG },
     #else
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_FLAME_BODY, ABILITY_SHADOW_TAG },
     #endif

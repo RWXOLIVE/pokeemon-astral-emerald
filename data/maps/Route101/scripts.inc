@@ -267,16 +267,16 @@ Route101_Text_PleaseHelp:
 	.string "Hello! You over there!\n"
 	.string "Please! Help!\p"
 	.string "In my BAG!\n"
-	.string "There's a POKé BALL!$"
+	.string "There's a {COLOR RED}POKé BALL!$"
 
 Route101_Text_DontLeaveMe:
 	.string "Wh-Where are you going?!\n"
 	.string "Don't leave me like this!$"
 
 Route101_Text_YouSavedMe:
-	.string "PROF. BIRCH: Whew…\p"
+	.string "{COLOR GREEN}PROF. BIRCH{COLOR DARK_GRAY}: Whew…\p"
 	.string "I was in the tall grass studying wild\n"
-	.string "POKéMON when I was jumped.\p"
+	.string "{COLOR RED}POKéMON {COLOR DARK_GRAY} when I was jumped.\p"
 	.string "You saved me.\n"
 	.string "Thanks a lot!\p"
 	.string "Oh?\p"

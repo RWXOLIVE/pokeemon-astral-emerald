@@ -88,7 +88,7 @@
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag
 #define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
+#define FLAG_UNUSED_0x04E    0x4E // trainer see
 #define FLAG_UNUSED_0x04F    0x4F // Unused Flag
 
 // Scripts
@@ -97,8 +97,8 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_RECEIVED_ABILITY_CAPSULE                    0x54  // Unused Flag
-#define FLAG_RECEIVED_MYSTIC_WATER                    0x55  // Unused Flag
+#define FLAG_RECEIVED_ABILITY_CAPSULE                    0x54  // Gift Item
+#define FLAG_RECEIVED_MYSTIC_WATER                    0x55  // Gift Item
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
@@ -119,7 +119,7 @@
 #define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
 
-#define FLAG_RECEIVED_GEODUDE_ALOLAN                    0x68  // Unused Flag
+#define FLAG_RECEIVED_GEODUDE_ALOLAN                    0x68  // Gift Pokemon
 
 #define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
 #define FLAG_RECEIVED_HM_STRENGTH            0x6A
@@ -589,7 +589,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_106_HEART_SCALE               (FLAG_HIDDEN_ITEMS_START + 0x2F)
 #define FLAG_HIDDEN_ITEM_GRANITE_CAVE_B2F_EVERSTONE_1        (FLAG_HIDDEN_ITEMS_START + 0x30)
 #define FLAG_HIDDEN_ITEM_GRANITE_CAVE_B2F_EVERSTONE_2        (FLAG_HIDDEN_ITEMS_START + 0x31)
-#define FLAG_HIDDEN_ITEM_ROUTE_109_REVIVE                    (FLAG_HIDDEN_ITEMS_START + 0x32)
+#define FLAG_HIDDEN_ITEM_ROUTE_109_SUPER_LURE                    (FLAG_HIDDEN_ITEMS_START + 0x32)
 #define FLAG_HIDDEN_ITEM_ROUTE_109_GREAT_BALL                (FLAG_HIDDEN_ITEMS_START + 0x33)
 #define FLAG_HIDDEN_ITEM_ROUTE_109_HEART_SCALE_1             (FLAG_HIDDEN_ITEMS_START + 0x34)
 #define FLAG_HIDDEN_ITEM_ROUTE_110_GREAT_BALL                (FLAG_HIDDEN_ITEMS_START + 0x35)
@@ -653,7 +653,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
 #define FLAG_HIDDEN_ITEM_ROUTE_116_WISE_GLASSES  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
+#define FLAG_ITEM_ISLAND_CAVE_TM_ICE_SPINNER  0x265 // Unused Flag
 #define FLAG_UNUSED_0x266  0x266 // Unused Flag
 #define FLAG_UNUSED_0x267  0x267 // Unused Flag
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag
@@ -1099,7 +1099,7 @@
 #define FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE                       0x41A
 #define FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL                        0x41B
 #define FLAG_ITEM_MT_PYRE_5F_LAX_INCENSE                            0x41C
-#define FLAG_ITEM_GRANITE_CAVE_B2F_REPEL                            0x41D
+#define FLAG_ITEM_GRANITE_CAVE_B2F_DRAGON_TERA_SHARD                          0x41D
 #define FLAG_ITEM_GRANITE_CAVE_B2F_RARE_CANDY                       0x41E
 #define FLAG_ITEM_PETALBURG_WOODS_X_ATTACK                          0x41F
 #define FLAG_ITEM_PETALBURG_WOODS_GREAT_BALL                        0x420
@@ -1186,7 +1186,7 @@
 #define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
 #define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
-#define FLAG_ITEM_ROUTE_109_POTION                                  0x474
+#define FLAG_ITEM_ROUTE_109_LEFTOVERS                                  0x474
 #define FLAG_ITEM_ROUTE_110_ELIXIR                                  0x475
 #define FLAG_ITEM_ROUTE_111_ELIXIR                                  0x476
 #define FLAG_ITEM_ROUTE_113_HYPER_POTION                            0x477

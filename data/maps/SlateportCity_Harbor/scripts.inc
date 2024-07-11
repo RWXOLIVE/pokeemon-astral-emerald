@@ -263,25 +263,15 @@ SlateportCity_Harbor_Movement_BoardFerryNorth:
 	walk_up
 	step_end
 
-SlateportCity_Harbor_EventScript_SailorItem::
-    giveitem ITEM_MYSTIC_WATER, 1
-    goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-    setflag FLAG_RECEIVED_ABILITY_CAPSULE   
-    msgbox SlateportCity_Harbor_Sailor_GiftItems, MSGBOX_DEFAULT
-    release
-    end
-
 SlateportCity_Harbor_EventScript_Sailor::
 	lock
 	faceplayer
-	goto_if_unset FLAG_SYS_GAME_CLEAR, SlateportCity_Harbor_EventScript_SailorNoAbnormalWeather
-	setvar VAR_0x8004, 0
-	call_if_set FLAG_DEFEATED_KYOGRE, SlateportCity_Harbor_EventScript_CountDefeatedLegendary
-	call_if_set FLAG_DEFEATED_GROUDON, SlateportCity_Harbor_EventScript_CountDefeatedLegendary
-	goto_if_eq VAR_0x8004, 2, SlateportCity_Harbor_EventScript_SailorNoAbnormalWeather  @ Defeated both
-	msgbox SlateportCity_Harbor_Text_AbnormalWeather, MSGBOX_DEFAULT
-	release
-	end
+	msgbox SlateportCity_Harbor_Sailor_GiftItems, MSGBOX_DEFAULT
+	giveitem ITEM_MYSTIC_WATER, 1
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	goto_if_set FLAG_RECEIVED_MYSTIC_WATER, SlateportCity_Harbor_Sailor_Strong   
+    release
+    end
 
 SlateportCity_Harbor_EventScript_SailorNoAbnormalWeather::
 	msgbox SlateportCity_Harbor_Text_LoveToGoDeepUnderwaterSomeday, MSGBOX_DEFAULT
@@ -554,9 +544,13 @@ SlateportCity_Harbor_Text_ThisWillHelpResearch:
 	.string "This will help our research a lot!$"
 
 SlateportCity_Harbor_Sailor_GiftItems:
-    .string "You must be that new Trainer\n"
-	.string "I've been hearing about.\n"
-	.string "I'll tell what, have this\p"
-	.string "MYSTICAL WATER.\n"
+    .string "You must be that new trainer\n"
+	.string "I've been hearing about.\l"
+	.string "I'll tell what, have this\n"
+	.string "MYSTICAL WATER.\p"
 	.string "It strengthens the power\n"
-	.string "of all your water type attacks!$"	
+	.string "of all your water type attacks!"
+	
+SlateportCity_Harbor_Sailor_Strong:
+    .string "What are you waiting for trainer!\n"
+	.string "Go out and explore the seas.$"		

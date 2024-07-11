@@ -1825,7 +1825,7 @@ LittlerootTown_EventScript_GiveRunningShoes::
 # 913 "data/maps/LittlerootTown/scripts.pory"
 LittlerootTown_Text_OurNewHomeLetsGoInside:
 # 914 "data/maps/LittlerootTown/scripts.pory"
-	.string "MOM: {PLAYER}, we're here, honey!\p"
+	.string "{COLOR GREEN}MOM{COLOR DARK_GRAY}:{PLAYER}, we're here, honey!\p"
 # 915 "data/maps/LittlerootTown/scripts.pory"
 	.string "It must be tiring riding with our things\n"
 # 916 "data/maps/LittlerootTown/scripts.pory"
@@ -1849,13 +1849,13 @@ LittlerootTown_Text_OurNewHomeLetsGoInside:
 # 925 "data/maps/LittlerootTown/scripts.pory"
 LittlerootTown_Text_WaitPlayer:
 # 926 "data/maps/LittlerootTown/scripts.pory"
-	.string "MOM: Wait, {PLAYER}!$"
+	.string "{COLOR GREEN}MOM{COLOR DARK_GRAY}: Wait, {PLAYER}!$"
 # 927 "data/maps/LittlerootTown/scripts.pory"
 
 # 928 "data/maps/LittlerootTown/scripts.pory"
 LittlerootTown_Text_WearTheseRunningShoes:
 # 929 "data/maps/LittlerootTown/scripts.pory"
-	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
+	.string "{COLOR GREEN}MOM{COLOR DARK_GRAY}: {PLAYER}! {PLAYER}! Did you\n"
 # 930 "data/maps/LittlerootTown/scripts.pory"
 	.string "introduce yourself to PROF. BIRCH?\p"
 # 931 "data/maps/LittlerootTown/scripts.pory"
@@ -1885,7 +1885,7 @@ LittlerootTown_Text_SwitchShoesWithRunningShoes:
 # 943 "data/maps/LittlerootTown/scripts.pory"
 LittlerootTown_Text_ExplainRunningShoes:
 # 944 "data/maps/LittlerootTown/scripts.pory"
-	.string "MOM: {PLAYER}, those shoes came with\n"
+	.string "{COLOR GREEN}MOM{COLOR DARK_GRAY}: {PLAYER}, those shoes came with\n"
 # 945 "data/maps/LittlerootTown/scripts.pory"
 	.string "instructions.\p"
 # 946 "data/maps/LittlerootTown/scripts.pory"
@@ -2023,7 +2023,7 @@ LittlerootTown_Text_ProfBirchsHouse:
 # 1012 "data/maps/LittlerootTown/scripts.pory"
 LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 # 1013 "data/maps/LittlerootTown/scripts.pory"
-	.string "PROF. BIRCH: Well, well, {PLAYER}{KUN}!\n"
+	.string "{COLOR GREEN}PROF. BIRCH{COLOR DARK_GRAY}: Well, well, {PLAYER}{KUN}!\n"
 # 1014 "data/maps/LittlerootTown/scripts.pory"
 	.string "That was good work out there!\p"
 # 1015 "data/maps/LittlerootTown/scripts.pory"

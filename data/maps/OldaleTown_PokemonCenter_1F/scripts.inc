@@ -18,12 +18,23 @@ OldaleTown_PokemonCenter_1F_EventScript_Nurse::
 	release
 	end
 
+OldaleTown_PokemonCenter_1F_EventScript_MysteryGiftMan::
+    lock
+	faceplayer
+	msgbox OldaleTown_MysteryGiftMan, MSGBOX_DEFAULT
+	release 
+	end
+
 OldaleTown_PokemonCenter_1F_EventScript_Gentleman::
 	msgbox OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC, MSGBOX_NPC
 	end
 
 OldaleTown_PokemonCenter_1F_EventScript_Boy::
-	msgbox OldaleTown_PokemonCenter_1F_Text_PokemonCentersAreGreat, MSGBOX_NPC
+    lock
+	faceplayer
+	msgbox OldaleTown_PokeCenterKid, MSGBOX_DEFAULT
+	msgbox OldaleTown_PokemonCenterTwo, MSGBOX_DEFAULT
+	release
 	end
 
 OldaleTown_PokemonCenter_1F_EventScript_Girl::
@@ -62,3 +73,14 @@ OldaleTown_PokemonCenter_1F_Text_TradedInWirelessClub:
 	.string "the second floor was built recently.\p"
 	.string "I traded POKéMON right away.$"
 
+OldaleTown_PokeCenterKid:
+    .string "Don't ask why I'm on this table\n"
+	.string "but while you are here...$"
+
+OldaleTown_PokemonCenterTwo:	
+	.string "Shops will give you more items based on\n"
+	.string "how many {COLOR GREEN}gym badges{COLOR DARK_GRAY} you have obtained.$"
+
+OldaleTown_MysteryGiftMan:
+    .string "Hi {COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}, right now, I serve no purpose.\n"	
+	.string "I can assure you in later updates I will.$"

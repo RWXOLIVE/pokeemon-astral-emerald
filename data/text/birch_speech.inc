@@ -1,7 +1,7 @@
 gText_Birch_Welcome::
 	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is BIRCH.\p"
+	.string "Welcome to {COLOR RED}POKéMON {COLOR BLUE}Astral {COLOR GREEN}Emerald\p"
+	.string "{COLOR DARK_GRAY}My name is BIRCH.\p"
 	.string "But everyone calls me the POKéMON\n"
 	.string "PROFESSOR.\p"
 	.string "$"
@@ -19,15 +19,12 @@ gText_Birch_MainSpeech::
 	.string "at times as cooperative workmates.\p"
 	.string "And sometimes, we band together\n"
 	.string "and battle others like us.\p"
-	.string "But despite our closeness, we don't\n"
-	.string "know everything about POKéMON.\p"
-	.string "In fact, there are many, many\n"
-	.string "secrets surrounding POKéMON.\p"
-	.string "To unravel POKéMON mysteries,\n"
-	.string "I've been undertaking research.\l"
-	.string "That's what I do.\p"
+	.string "{COLOR GREEN}RWXO{COLOR DARK_GRAY}: This GAME is intended to be {COLOR RED}hard\n"
+	.string "{COLOR DARK_GRAY}If you see any bugs, please let me know.\p"
+	.string "Enough talking, thank you for playing...\n"
+	.string "{COLOR RED}POKéMON {COLOR BLUE}Astral {COLOR LIGHT_GREEN}Emerald.\p"
 	.string "$"
-
+	
 gText_Birch_AndYouAre::
 	.string "And you are?$"
 

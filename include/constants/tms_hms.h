@@ -8,7 +8,7 @@
     F(CALM_MIND) \
     F(ROAR) \
     F(TOXIC) \
-    F(HAIL) \
+    F(LIFE_DEW) \
     F(DRAIN_PUNCH) \
     F(BULLET_SEED) \
     F(HIDDEN_POWER) \
@@ -51,7 +51,9 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(HELPING_HAND) \
+    F(ICE_SPINNER) \
 
 #define FOREACH_HM(F) \
     F(CUT) \

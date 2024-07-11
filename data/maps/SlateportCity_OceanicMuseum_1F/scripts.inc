@@ -290,12 +290,12 @@ SlateportCity_OceanicMuseum_1F_Text_WantSeaPokemon:
 
 SlateportCity_OceanicMuseum_1F_Text_RememberMeTakeThis:
 	.string "Aiyeeeh!\n"
-	.string "What are you doing here?\p"
+	.string "What are you doing here twerp?\p"
 	.string "Me? I'm the TEAM AQUA member\n"
 	.string "you thumped before, remember?\l"
-	.string "Back in RUSTURF TUNNEL?\p"
+	.string "Back in PETALBURG WOODS?\p"
 	.string "Here, take this!\n"
-	.string "You have to forgive me!$"
+	.string "I'll be right back!$"
 
 SlateportCity_OceanicMuseum_1F_Text_HopeINeverSeeYouAgain:
 	.string "That TM, it suits you more than it\n"

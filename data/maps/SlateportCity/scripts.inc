@@ -136,27 +136,150 @@ SlateportCity_Movement_ScottExit:
 	walk_left
 	step_end
 
-SlateportCity_EventScript_EnergyGuru::
+SlateportCity_EventScript_MintMan::
 	lock
 	faceplayer
-	message SlateportCity_Text_EnergyGuruSellWhatYouNeed
+	message SlateportCity_Text_MintManSellWhatYouNeed
 	waitmessage
-	pokemart SlateportCity_Pokemart_EnergyGuru
+	pokemart SlateportCity_Pokemart_MintMan
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-SlateportCity_Pokemart_EnergyGuru:
-	.2byte ITEM_PROTEIN
-	.2byte ITEM_IRON
-	.2byte ITEM_CARBOS
-	.2byte ITEM_ZINC
-	.2byte ITEM_CALCIUM
-	.2byte ITEM_HP_UP
+SlateportCity_Pokemart_MintMan:
+	.2byte ITEM_ADAMANT_MINT
+	.2byte ITEM_NAUGHTY_MINT
+	.2byte ITEM_LONELY_MINT
+	.2byte ITEM_BRAVE_MINT
+	.2byte ITEM_BOLD_MINT
+	.2byte ITEM_IMPISH_MINT
+	.2byte ITEM_LAX_MINT
+	.2byte ITEM_RELAXED_MINT
+	.2byte ITEM_MODEST_MINT
+	.2byte ITEM_MILD_MINT
+	.2byte ITEM_RASH_MINT
+	.2byte ITEM_QUIET_MINT
+	.2byte ITEM_CALM_MINT
+	.2byte ITEM_GENTLE_MINT
+	.2byte ITEM_CAREFUL_MINT
+	.2byte ITEM_SASSY_MINT
+	.2byte ITEM_TIMID_MINT
+	.2byte ITEM_HASTY_MINT
+	.2byte ITEM_JOLLY_MINT
+	.2byte ITEM_NAIVE_MINT
+	.2byte ITEM_SERIOUS_MINT
 	.2byte ITEM_NONE
 	release
 	end
+
+SlateportCity_EventScript_TMSGUY::
+	lock
+	faceplayer
+	message SlateportCity_Text_TMSGUY
+	waitmessage
+	pokemart SlateportCity_Pokemart_TMS 
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+    .align 2
+SlateportCity_Pokemart_TMS:
+	.2byte ITEM_TM_REST
+	.2byte ITEM_TM_SLEEP_TALK
+	.2byte ITEM_TM_LIFE_DEW
+	.2byte ITEM_TM_HELPING_HAND
+	.2byte ITEM_NONE
+	release
+	end
+
+SlateportCity_EventScript_BerryCook::
+    lock
+	faceplayer
+	message SlateportCity_Text_BerryCook
+	waitmessage
+	pokemart SlateportCity_Pokemart_BerryCook
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_EventScript_BerryCook2::
+    lock
+	faceplayer
+	message SlateportCity_Text_BerryCook
+	waitmessage
+	goto_if_set FLAG_BADGE04_GET, Slateport_Market_ExpandedItems
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end	
+
+SlateportCity_EventScript_BerryCook3::
+    lock
+	faceplayer
+	message SlateportCity_Text_BerryCook
+	waitmessage
+	goto_if_set FLAG_BADGE05_GET, Slateport_Market_MoreExpandedItems
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end	
+
+    .align 2
+SlateportCity_Pokemart_BerryCook:
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_LEPPA_BERRY
+	.2byte ITEM_BERRY_JUICE
+	.2byte ITEM_NONE
+	release
+	end	
+
+@Slateport_Market_ExpandedItems::
+    @pokemart Slateport_Market_ExpandedItems
+	@msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	@release
+	@end
+    
+	.align 2
+Slateport_Market_ExpandedItems:	
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_PERSIM_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_LEPPA_BERRY
+	.2byte ITEM_BERRY_JUICE
+	.2byte ITEM_NONE
+	release
+	end
+
+@Slateport_Market_MoreExpandedItems::
+    @pokemart Slateport_Market_MoreExpandedItems
+	@msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	@release
+	@end
+
+	.align 2
+Slateport_Market_MoreExpandedItems:	
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_PERSIM_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_LEPPA_BERRY
+	.2byte ITEM_BERRY_JUICE
+	.2byte ITEM_LUM_BERRY
+	.2byte ITEM_FIGY_BERRY
+	.2byte ITEM_WIKI_BERRY
+	.2byte ITEM_NONE
+	release
+	end		
 
 SlateportCity_EventScript_EffortRibbonWoman::
 	lock
@@ -950,8 +1073,8 @@ SlateportCity_EventScript_BerryCrushRankingsSign::
 	releaseall
 	end
 
-SlateportCity_Text_EnergyGuruSellWhatYouNeed:
-	.string "I'm the ENERGY GURU! I'll go for it and\n"
+SlateportCity_Text_MintManSellWhatYouNeed:
+	.string "I'm the {COLOR GREEN}Mint Man{COLOR DARK_GRAY}! I'll go for it and\n"
 	.string "sell you what you need!$"
 
 SlateportCity_Text_OhYourPokemon:
@@ -1383,3 +1506,11 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "After all, a tough TRAINER is\n"
 	.string "the perfect fit for the BATTLE TENT!\p"
 	.string "Give it your best effort!$"
+
+SlateportCity_Text_TMSGUY:
+    .string "What you want is what i got champ.\n"
+	.string "I sell TMs mainly for double battles.$"
+
+SlateportCity_Text_BerryCook:
+    .string "Hello chief, I got all the berries.\n"
+	.string "but at the moment I'm running low.$"	
